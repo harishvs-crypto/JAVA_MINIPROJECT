@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing - MediCare+</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .invoice-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .invoice-header { display: flex; justify-content: space-between; border-bottom: 2px solid var(--border-color); padding-bottom: 20px; margin-bottom: 20px; }
+        .invoice-total { font-size: 24px; color: var(--primary-blue); font-weight: bold; text-align: right; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>MediCare+</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="billing.html" class="active">Billing</a></li>
+                <li><a href="index.html" style="color: var(--danger);">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="topbar">
+                <h2>Billing & Invoices</h2>
+                <button class="btn-primary" style="width:auto; padding:8px 16px;">Generate New Bill</button>
+            </div>
+
+            <div class="invoice-box">
+                <div class="invoice-header">
+                    <div>
+                        <h2 style="color: var(--primary-blue);">MediCare+ Hospital</h2>
+                        <p>123 Health Avenue, City</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <h3>INVOICE #INV-1024</h3>
+                        <p>Date: 10 May 2026</p>
+                        <span class="badge badge-pending">Status: Pending</span>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong>Bill To:</strong><br>
+                    Patient: Rahul Kumar<br>
+                    ID: #PT-101
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th style="text-align: right;">Amount (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Consultation Fee (Dr. Sharma)</td>
+                            <td style="text-align: right;">300.00</td>
+                        </tr>
+                        <tr>
+                            <td>Medicine Charges</td>
+                            <td style="text-align: right;">150.00</td>
+                        </tr>
+                        <tr>
+                            <td>Lab Test Charges</td>
+                            <td style="text-align: right;">0.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="invoice-total">
+                    Total: ₹450.00
+                </div>
+                <div style="margin-top: 30px; text-align: right;">
+                    <button class="btn-primary" style="width: auto;">Mark as Paid</button>
+                    <button class="btn-action btn-view" style="padding: 12px; margin-left: 10px;">Export as .TXT</button>
+                    <button class="btn-action btn-edit" style="padding: 12px; margin-left: 10px;" onclick="window.print()">Print Bill</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

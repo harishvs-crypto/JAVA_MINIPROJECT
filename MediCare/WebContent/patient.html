@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients - MediCare+</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>MediCare+</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="doctor.html">Doctors</a></li>
+                <li><a href="patient.html" class="active">Patients</a></li>
+                <li><a href="appointment.html">Appointments</a></li>
+                <li><a href="index.html" style="color: var(--danger);">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="topbar">
+                <h2>Patient Management</h2>
+                <button class="btn-primary" style="width:auto; padding:8px 16px;">+ Add Patient</button>
+            </div>
+            
+            <div class="table-container">
+                <div style="margin-bottom: 15px;">
+                    <input type="text" placeholder="Search patient by Name or ID..." class="form-control" style="max-width: 300px; display: inline-block;">
+                    <button class="btn-action btn-view">Search</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Name</th>
+                            <th>Age/Gender</th>
+                            <th>Contact</th>
+                            <th>Disease</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#PT-101</td>
+                            <td>Rahul Kumar</td>
+                            <td>32 / M</td>
+                            <td>9876543210</td>
+                            <td>Fever</td>
+                            <td>
+                                <button class="btn-action btn-edit">Edit</button>
+                                <button class="btn-action btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

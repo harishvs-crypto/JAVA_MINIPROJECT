@@ -1,0 +1,4 @@
+--- SPENDWISE EXPORT ---
+Full Expense Report
+------------------------
+Date: 2026-04-15 | Category: Food | Amount: 2000.0 | Mode: Cash

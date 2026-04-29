@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - MediCare+</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .report-box {
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px dashed var(--border-color);
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>MediCare+</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="reports.html" class="active">Reports</a></li>
+                <li><a href="index.html" style="color: var(--danger);">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h2>Medical Reports</h2>
+            
+            <div class="table-container" style="margin-top:20px;">
+                <form action="UploadReportServlet" method="POST" enctype="multipart/form-data">
+                    <div class="form-group" style="display: flex; gap: 10px; align-items: flex-end;">
+                        <div>
+                            <label>Patient ID</label>
+                            <input type="text" class="form-control" placeholder="e.g. #PT-101">
+                        </div>
+                        <div>
+                            <label>Upload Report (.txt or .pdf)</label>
+                            <input type="file" class="form-control">
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: auto; margin-top: 0;">Upload</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="table-container" style="margin-top:20px;">
+                <h3>Generated Reports</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Report ID</th>
+                            <th>Patient Name</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#REP-001</td>
+                            <td>Rahul Kumar</td>
+                            <td>10 May 2026</td>
+                            <td>
+                                <button class="btn-action btn-view">Preview</button>
+                                <button class="btn-action btn-edit">Download (.txt)</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="report-box">
+                    <h4>Report Preview</h4>
+                    <p style="font-family: monospace; white-space: pre-wrap; margin-top: 10px; color: var(--text-light);">Patient Name: Rahul Kumar
+Doctor: Dr. Sharma
+Diagnosis: Fever
+Prescription: Paracetamol
+Next Visit: 15 May 2026</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

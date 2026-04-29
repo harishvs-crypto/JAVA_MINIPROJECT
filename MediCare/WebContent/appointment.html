@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - MediCare+</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .filter-bar {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .filter-bar input, .filter-bar select {
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+        .slot-btn {
+            padding: 8px 15px;
+            margin: 5px;
+            border: 1px solid var(--primary-blue);
+            background: #fff;
+            color: var(--primary-blue);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .slot-btn:hover {
+            background: var(--primary-blue);
+            color: #fff;
+        }
+        .slot-booked {
+            border-color: var(--danger);
+            color: var(--danger);
+            cursor: not-allowed;
+            background: #ffe6e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>MediCare+</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="doctor.html">Doctors</a></li>
+                <li><a href="patient.html">Patients</a></li>
+                <li><a href="appointment.html" class="active">Appointments</a></li>
+                <li><a href="index.html" style="color: var(--danger);">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h2>Book Appointment</h2>
+            
+            <div class="table-container" style="margin-top: 20px;">
+                <form action="AppointmentServlet" method="POST">
+                    <div class="filter-bar">
+                        <input type="text" placeholder="Search Patient ID/Name..." style="flex:1;">
+                        <select>
+                            <option>Select Doctor (Filter)</option>
+                            <option>Dr. Anjali Rao (Cardiology)</option>
+                            <option>Dr. Sharma (General)</option>
+                        </select>
+                        <input type="date">
+                        <button type="button" class="btn-action btn-view">Check Slots</button>
+                    </div>
+
+                    <div>
+                        <h4>Available Time Slots (Using Collections Filter)</h4>
+                        <div style="margin: 15px 0;">
+                            <button type="button" class="slot-btn">09:00 AM</button>
+                            <button type="button" class="slot-btn">09:30 AM</button>
+                            <button type="button" class="slot-btn slot-booked" disabled>10:00 AM (Booked)</button>
+                            <button type="button" class="slot-btn">10:30 AM</button>
+                            <button type="button" class="slot-btn">11:00 AM</button>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: auto; padding: 10px 20px;">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

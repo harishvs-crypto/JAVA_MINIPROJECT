@@ -1,0 +1,6 @@
+--- SPENDWISE EXPORT ---
+Full Expense Report
+------------------------
+Date: 2026-04-26 | Category: Travel | Amount: 2000.0 | Mode: Cash
+Date: 2026-04-21 | Category: Shopping | Amount: 3000.0 | Mode: Cash
+Date: 2026-04-13 | Category: Shopping | Amount: 2500.0 | Mode: Cash

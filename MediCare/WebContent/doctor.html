@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors - MediCare+</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .doctor-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid var(--primary-blue);
+        }
+        .doctor-card h3 { color: var(--text-dark); margin: 10px 0 5px; }
+        .doc-specialty { color: var(--primary-blue); font-weight: 500; font-size: 14px; }
+        .doc-fee { margin-top: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>MediCare+</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="doctor.html" class="active">Doctors</a></li>
+                <li><a href="patient.html">Patients</a></li>
+                <li><a href="appointment.html">Appointments</a></li>
+                <li><a href="index.html" style="color: var(--danger);">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="topbar">
+                <h2>Doctor Directory</h2>
+                <button class="btn-primary" style="width:auto; padding:8px 16px;">+ Add Doctor</button>
+            </div>
+            
+            <div class="cards-row">
+                <div class="doctor-card">
+                    <h3>Dr. Anjali Rao</h3>
+                    <div class="doc-specialty">Cardiology</div>
+                    <p style="font-size: 13px; color: var(--text-light); margin-top: 5px;">Available: Mon - Fri</p>
+                    <div class="badge badge-confirmed" style="margin-top:10px; display:inline-block;">Available</div>
+                    <div class="doc-fee">Fee: ₹500</div>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Sharma</h3>
+                    <div class="doc-specialty">General Physician</div>
+                    <p style="font-size: 13px; color: var(--text-light); margin-top: 5px;">Available: Mon - Sat</p>
+                    <div class="badge badge-confirmed" style="margin-top:10px; display:inline-block;">Available</div>
+                    <div class="doc-fee">Fee: ₹300</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
